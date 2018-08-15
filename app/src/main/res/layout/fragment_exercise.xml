@@ -1,0 +1,114 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.grigori.fitnessapp.NutritionFragment"
+    android:background="@drawable/purple_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/exercise_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="228dp"
+            android:background="#00FFFFFF"
+            android:elevation="2dp">
+
+            <Button
+                android:id="@+id/add_exercise_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="4dp"
+                android:background="#00000000"
+                android:text="Add exercise"
+                android:layout_marginLeft="8dp"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/exercise_diary_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="4dp"
+                android:background="#00000000"
+                android:text="Exercise diary"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+
+            <TextView
+                android:id="@+id/steps_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5036"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:layout_marginTop="26dp"
+                android:layout_below="@+id/exercise_diary_button"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/steps_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/steps_tv"
+                android:layout_centerHorizontal="true"
+                android:text="STEPS TODAY"
+                android:textColor="#EEEEEE" />
+
+            <ImageView
+                android:id="@+id/progress_circle"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignTop="@+id/exercise_diary_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/circle_with_lines" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/date_picker_layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/exercise_dashboard"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            >
+            <ImageButton
+                android:id="@+id/date_picker_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendar_ic"
+                android:background="@drawable/roundedbutton"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today, 17th June"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/date_picker_button"
+                />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/exersises_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/date_picker_layout"
+            android:background="#FFFFFF"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

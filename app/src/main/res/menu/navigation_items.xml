@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_feed"
+        android:title="Feed"
+        android:icon="@drawable/feed_ic"
+
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_discover"
+        android:title="Discover"
+        android:icon="@drawable/discover_ic"
+
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_nutrition"
+        android:title="Nutrition"
+        android:icon="@drawable/nutrition_ic"
+
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_exercises"
+        android:title="Exercises"
+        android:icon="@drawable/exercise_ic"
+
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+
+
+</menu>

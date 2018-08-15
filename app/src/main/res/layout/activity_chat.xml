@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.grigori.fitnessapp.ChatActivity">
+
+    <ListView
+        android:id="@+id/chat_messages_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chat_tools_layout"
+        android:stackFromBottom="true"
+        android:layout_margin="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_tools_layout"
+
+        android:layout_alignParentBottom="true"
+        >
+        <EditText
+            android:id="@+id/message_text_et"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:layout_margin="4dp"
+            android:layout_toLeftOf="@+id/send_chat_message_button"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:id="@+id/send_chat_message_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="4dp"
+            android:onClick="onSendChatMessageClicked"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

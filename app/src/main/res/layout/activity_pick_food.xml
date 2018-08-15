@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    tools:context="com.example.grigori.fitnessapp.PickFoodActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/pick_food_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:title="Pick the food you've eaten">
+    </android.support.v7.widget.Toolbar>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        />
+
+    <ListView
+        android:id="@+id/food_list_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

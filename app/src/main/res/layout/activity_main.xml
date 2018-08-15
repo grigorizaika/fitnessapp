@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.grigori.fitnessapp.MainActivity"
+    >
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation_main"
+        />
+    
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation_main"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:elevation="8dp"
+        app:menu="@menu/navigation_items"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE"
+
+        />
+
+</RelativeLayout>

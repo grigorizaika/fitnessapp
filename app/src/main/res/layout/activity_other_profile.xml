@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.grigori.fitnessapp.OtherProfileActivity"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/other_user_profile_pic_iv"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+    <TextView
+        android:id="@+id/other_user_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:layout_gravity="center_horizontal"
+        android:textSize="22sp"
+        android:layout_margin="16dp"/>
+
+        <ImageButton
+            android:id="@+id/send_message_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/messages_ic"
+            android:background="#00000000"
+            android:onClick="onSendMessageClicked"
+            />
+
+        <ImageButton
+            android:id="@+id/subscribe_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:layout_toLeftOf="@+id/send_message_button"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/subscribe_ic"
+            android:background="#00000000"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/other_user_about_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About me"
+        android:layout_margin="16dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/other_user_posts_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

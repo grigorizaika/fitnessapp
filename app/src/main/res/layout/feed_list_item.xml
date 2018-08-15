@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp"
+
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_header">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/profile_pic_iv"
+            android:src="@drawable/profile_stub"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_name_tv"
+            android:text="Name Surname"
+            android:layout_gravity="center"
+            android:paddingLeft="8dp"
+            android:layout_toRightOf="@+id/profile_pic_iv"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/post_date_tv"
+            android:text="22 Oct 2017, 06:00 PM"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:textSize="10sp"
+            />
+    </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/post_content_tv"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut pellentesque nibh."
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/post_photo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="180dp"
+            android:scaleType="centerInside"
+            />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/like_button"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/like_ic"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likes_tv"
+            android:layout_gravity="center"
+            android:text="1,032"
+            android:layout_marginLeft="8dp"
+            />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/comment_button"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/comment_ic"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comments_tv"
+            android:text="20"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/share_button"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/share_ic"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/shares_tv"
+            android:text="10"
+            android:layout_marginLeft="8dp"
+            />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/more_button"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_ic"
+            android:layout_marginLeft="32dp"
+            >
+
+        </ImageButton>
+
+    </LinearLayout>
+</LinearLayout>
+
+</android.support.v7.widget.CardView>

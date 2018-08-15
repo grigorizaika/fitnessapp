@@ -1,0 +1,194 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.grigori.fitnessapp.FeedFragment"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/feed_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp"
+        >
+        <ImageView
+            android:id="@+id/my_profile_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile_stub"
+            android:background="@drawable/roundedbutton"
+            android:onClick="onProfilePictureClicked"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Feed"
+            android:layout_toRightOf="@id/my_profile_iv"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_toLeftOf="@+id/messages_button"
+
+            />
+        <ImageView
+            android:id="@+id/conversations_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/messages_ic"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="onConversationsClicked"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/post_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <EditText
+            android:layout_width="260dp"
+            android:layout_height="48dp"
+            android:id="@+id/status_update_et"
+            android:hint="Type your status update..."
+            android:layout_margin="8dp"
+            />
+            <ImageButton
+                android:id="@+id/post_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/send_ic"
+                android:background="#00000000"
+                android:layout_marginTop="8dp"
+                android:onClick="onPostClicked"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/picked_photo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="100dp"
+            android:maxWidth="100dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/pick_photo_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/photo_ic"
+            android:layout_marginStart="16dp"
+            android:onClick="onPickPhotoClicked"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/add_photo_tv"
+            android:text="Photo"
+            android:layout_marginStart="8dp"
+            android:textSize="10sp"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/video_ic"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/add_video_tv"
+            android:text="Video"
+            android:layout_marginStart="8dp"
+            android:textSize="10sp"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/file_ic"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/add_file_tv"
+            android:text="File"
+            android:layout_marginStart="8dp"
+            android:textSize="10sp"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/position_ic"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/add_location_tv"
+            android:text="Location"
+            android:layout_marginStart="8dp"
+            android:textSize="10sp"
+            />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/feed_rv"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#FFFFFF"
+
+        />
+
+</LinearLayout>
+</ScrollView>
